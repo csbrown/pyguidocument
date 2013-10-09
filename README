@@ -1,0 +1,17 @@
+This is a program to conveniently document your gui application with point/click on an image of the gui.  viz. This opens an image of your gui, on which you can point and click to reveal documentation about that part of the gui.  Also includes an editor-mode which allows you to 'paint' over parts of your gui image to indicate a point/click area and create documentation about that area.
+
+Usage:
+$ python paint.py [image file] [previously saved data]
+
+eg.
+$ python paint.py CC.png CC.boxes
+
+The CLI at the bottom accepts the following commands:
+
+brush.on >> Turns the brush on and the text input feature off
+brush.off >> Turns the brush off and the text input feature on
+dump >> Saves the current text input and brush areas
+brush.color=red >> Changes the brush color to red
+brush.tag=plait >> Changes the brush tag to 'plait'.  This creates a separate text area for the spot over which you paint
+brush.width=50 >> Changes the brush size to 50 (default is 20)
+remove.plait >> Totally removes the text area and all text for the plait tag (everything colored while brush.tag=plait)
